@@ -43,7 +43,6 @@ echo "Creating tarball and signing it..."
 
 PROJECT=$(basename $(pwd))
 TARBALL="${PROJECT}-${VERSION}.tar.gz"
-SIGFILE="${TARFILE}.asc"
 
 git archive --prefix="${VERSION}/" -o "${TARBALL}" "${TAG}"
 gpg --armor --detach-sign "${TARBALL}"
