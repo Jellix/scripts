@@ -6,7 +6,7 @@ FALSE_FLAGS="" # no false flag operations here
 
 print_trues() {
   for F in ${TRUE_FLAGS} ; do
-    echo -n "${F} => "; git config --get "${F}"
+    echo "${F} => `git config --default "unset" --get "${F}"`"
   done
 }
 
